@@ -5,7 +5,7 @@
 h3, h4, h1, h2{
   font-family:'backslash';
   font-size:2.5rem !important;
-  color:tomato;
+  color:#171C2A;
 }
 h1{
   font-size: 60px !important;
@@ -47,4 +47,10 @@ h4{
 #main-dashboard{
   height:100vh;
   width:100%;
+}
+.common-margin{
+  margin:100px 0;
+}
+#card-image{
+  height:200px;
 }

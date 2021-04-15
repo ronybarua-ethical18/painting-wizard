@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
 import DashBoard from './components/DashBoard/DashBoard/DashBoard';
+import AddReview from './components/AddReview/AddReview';
 function App() {
   return (
     <div className="App">
@@ -22,8 +23,8 @@ function App() {
           <Route path="/dashboard">
               <DashBoard></DashBoard>
           </Route>
-          <Route path="/dashboard">
-
+          <Route path="/addReview">
+            <AddReview></AddReview>
           </Route>
         </Switch>
       </Router>

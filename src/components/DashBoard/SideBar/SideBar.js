@@ -22,6 +22,10 @@ const SideBar = () => {
                     <FontAwesomeIcon icon={faWrench} className="mr-3"></FontAwesomeIcon>Manage Services</Link>
             </div>
             <div id="navigationLink" className="bg-white mt-3 p-3">
+                <Link to="/addReview">
+                    <FontAwesomeIcon icon={faHome} className="mr-3"></FontAwesomeIcon>Review</Link>
+            </div>
+            <div id="navigationLink" className="bg-white mt-3 p-3">
                 <Link to="/home">
                     <FontAwesomeIcon icon={faHome} className="mr-3"></FontAwesomeIcon>Go Home</Link>
             </div>

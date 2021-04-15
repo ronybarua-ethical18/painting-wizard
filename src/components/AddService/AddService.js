@@ -61,7 +61,7 @@ const AddService = () => {
                     <Form.Label><b>Service Title</b></Form.Label>
                     <Form.Control type="text" id="input-service" name="title" {...register("title")} placeholder="Enter Service Name" required />
                 </Form.Group>
-
+                
                 <Form.Group controlId="formBasicAuthor">
                     <Form.Label><b>Service Description</b></Form.Label>
                     <textarea name="description" {...register("description")} id="input-description" placeholder="Enter Description" className="form-control" id="" cols="30" rows="5"></textarea>
