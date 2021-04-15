@@ -1,0 +1,36 @@
+
+
+#input-service, #input-description, #input-price {
+    padding: 20px 0;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gainsboro;
+}
+
+#input-file {
+    display: none;
+}
+
+#add-book {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#file-label {
+    padding: 12px 20px;
+    border-radius: 25px;
+    color: #000;
+    cursor: pointer;
+    border: 2px solid #f10fad;
+}
+
+#file-label:hover {
+    color: #fff;
+    background-color: rgba(255, 2, 2);
+    transition: all 0.3s ease-in-out;
+}

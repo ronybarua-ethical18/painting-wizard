@@ -1,0 +1,12 @@
+#sidebar{
+    height:100vh;
+    background-image: url('../../../images/sidebar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#navigationLink{
+    border-radius: 20px;
+    display:flex;
+    align-items: center;
+}

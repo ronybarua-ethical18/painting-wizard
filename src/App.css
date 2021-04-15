@@ -1,4 +1,50 @@
 .App {
-  text-align: center;
+
   font-family: 'Raleway', sans-serif;
+}
+h3, h4, h1, h2{
+  font-family:'backslash';
+  font-size:2.5rem !important;
+  color:tomato;
+}
+h1{
+  font-size: 60px !important;
+}
+h2{
+  font-size:40px;
+}
+h3{
+  font-size:30px;
+}
+h4{
+  font-size:20px
+}
+#btn-brand{
+  border:none;
+  outline:none;
+  padding:12px 20px;
+  border-bottom-left-radius: 20px;
+  margin-top: 20px;
+  background:#fff;
+  color:#000;
+}
+.iconic{
+  color:#F72E2E
+}
+#btn-action{
+  border:2px solid #FFD400;
+  padding:10px 18px;
+  border-bottom-left-radius: 20px;
+  color:#000;
+  background:#fff;
+}
+#btn-action:hover{
+  color:#fff;
+  background: #E50646;
+  border:2px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+#main-dashboard{
+  height:100vh;
+  width:100%;
 }

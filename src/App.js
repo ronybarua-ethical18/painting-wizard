@@ -5,19 +5,25 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Home from './components/Home/Home/Home';
+import DashBoard from './components/DashBoard/DashBoard/DashBoard';
 function App() {
   return (
     <div className="App">
+
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home></Home>
           </Route>
-          <Route path="/about">
-            <About />
+          <Route exact path="/home">
+            <Home></Home>
           </Route>
           <Route path="/dashboard">
-            <Dashboard />
+              <DashBoard></DashBoard>
+          </Route>
+          <Route path="/dashboard">
+
           </Route>
         </Switch>
       </Router>

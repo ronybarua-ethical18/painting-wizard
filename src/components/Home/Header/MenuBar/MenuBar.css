@@ -1,0 +1,16 @@
+#logo{
+    width:50px;
+}
+#logo-title{
+    font-size:30px;
+    font-weight: 500;
+    color:#FF3997;
+}
+.navigation{
+    text-decoration: none;
+    color:#000;
+}
+.navigation:hover{
+    text-decoration: none;
+    color:#FF3997;
+}
