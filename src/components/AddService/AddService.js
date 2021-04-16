@@ -20,7 +20,7 @@ const AddService = () => {
         }
         console.log(serviceData)
         if (serviceData.imageURL !== null) {
-            const url = 'http://localhost:5000/addService';
+            const url = 'https://mighty-ocean-87134.herokuapp.com/addService';
             fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

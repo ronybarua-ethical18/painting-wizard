@@ -13,7 +13,7 @@ const AddReview = () => {
             designation: data.designation,
             review: data.review
         }
-        const url = 'http://localhost:5000/addReview';
+        const url = 'https://mighty-ocean-87134.herokuapp.com/addReview';
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

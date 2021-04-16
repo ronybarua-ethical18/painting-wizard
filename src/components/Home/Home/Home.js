@@ -10,14 +10,14 @@ const Home = () => {
     const [reviews, setReviews] = useState([]);
     
     useEffect(() => {
-        const url = 'http://localhost:5000/services';
+        const url = 'https://mighty-ocean-87134.herokuapp.com/services';
         fetch(url)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     useEffect(() =>{
-        fetch('http://localhost:5000/reviews')
+        fetch('https://mighty-ocean-87134.herokuapp.com/reviews')
         .then(res => res.json())
         .then(data => setReviews(data))
     }, [])

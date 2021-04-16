@@ -7,7 +7,7 @@ const SingleService = () => {
     const [services, setServices] = useState([]);
     console.log(services)
     useEffect(() => {
-        fetch('http://localhost:5000/service/'+serviceId)
+        fetch('https://mighty-ocean-87134.herokuapp.com/service/'+serviceId)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [serviceId])
