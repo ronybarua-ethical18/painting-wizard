@@ -6,7 +6,7 @@ const Services = (props) => {
     const { _id, name, price, description, imageURL } = props.service;
     const history = useHistory();
     const handleClick = (id) =>{
-        const url = `service/${id}`;
+        const url = `serviceBooking/${id}`;
         history.push(url);
     }
     return (

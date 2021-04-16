@@ -10,11 +10,12 @@ import Home from './components/Home/Home/Home';
 import DashBoard from './components/DashBoard/DashBoard/DashBoard';
 import AddReview from './components/AddReview/AddReview';
 import { createContext } from 'react';
-import ServiceBooking from './components/ServiceBooking/ServiceBooking';
 import Login from './components/Login/Login';
+import { useState } from 'react';
+import SingleService from './components/SingleService/SingleService';
 export const UserContext = createContext();
 function App() {
-  const [loggedInUser, setLoggedInUser] = UserContext({})
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
     <div className="App">
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
@@ -32,8 +33,8 @@ function App() {
             <PrivateRoute path="/dashboard">
                 <DashBoard></DashBoard>
             </PrivateRoute>
-            <PrivateRoute path="/service/:serviceId">
-                <ServiceBooking></ServiceBooking>
+            <PrivateRoute path="/serviceBooking/:serviceId">
+                <SingleService></SingleService>
             </PrivateRoute>
             <PrivateRoute path="/addReview">
               <AddReview></AddReview>

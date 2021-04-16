@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
+import { Button } from 'react-bootstrap';
 const CheckOutForm = ({handlePayment}) => {
     const [paymentError, setPaymentError] = useState(null);
     const [paymentSuccess, setPaymentSuccess] = useState(null);
@@ -40,10 +41,8 @@ const CheckOutForm = ({handlePayment}) => {
   
     return (
       <form onSubmit={handleSubmit}>
-        <CardElement />
-        <button type="submit" disabled={!stripe}>
-          Pay
-        </button>
+        <CardElement className="shadow p-3" />
+        <Button type="submit" className="mt-3 w-100" disabled={!stripe}>Pay and Book Now</Button>
         {
             paymentError && <p className="text-danger">{paymentError}</p> 
         }

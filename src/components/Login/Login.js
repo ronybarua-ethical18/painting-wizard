@@ -7,6 +7,7 @@ import MenuBar from '../Home/Header/MenuBar/MenuBar';
 import { Button, Form } from 'react-bootstrap';
 import banner from '../../images/banners.jpg';
 import { useHistory, useLocation } from 'react-router';
+import './Login.css';
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     // firebase initialization
@@ -52,11 +53,11 @@ const Login = () => {
             });
     }
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" id="loginPage">
             <MenuBar></MenuBar>
             <div className="row">
-                <div className="col-md-6">
-                    <Form>
+                <div className="col-md-6 d-flex align-items-center p-4 justify-content-center">
+                    <Form className="w-100">
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" />
@@ -74,11 +75,11 @@ const Login = () => {
                         <Button variant="primary" type="submit">
                             Login
                         </Button>
+                        <Button onClick={handleGoogleSignIn}>Login with Google</Button>
                     </Form>
-                    <Button onClick={handleGoogleSignIn}>Login with Google</Button>
                 </div>
                 <div className="col-md-6">
-                    <img src={banner} className="img-fluid" alt="" />
+                    <img src={banner} id="loginImg" className="img-fluid" alt="" />
                 </div>
             </div>
         </div>

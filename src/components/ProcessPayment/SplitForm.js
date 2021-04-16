@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { Button} from 'react-bootstrap';
 import {
   useStripe,
   useElements,
@@ -7,15 +8,15 @@ import {
   CardExpiryElement
 } from "@stripe/react-stripe-js";
 
-import useResponsiveFontSize from "../../useResponsiveFontSize";
+// import useResponsiveFontSize from "../../useResponsiveFontSize";
 
 const useOptions = () => {
-  const fontSize = useResponsiveFontSize();
+  // const fontSize = useResponsiveFontSize();
   const options = useMemo(
     () => ({
       style: {
         base: {
-          fontSize,
+          
           color: "#424770",
           letterSpacing: "0.025em",
           fontFamily: "Source Code Pro, monospace",
@@ -28,13 +29,13 @@ const useOptions = () => {
         }
       }
     }),
-    [fontSize]
+    []
   );
 
   return options;
 };
 
-const StripeForm = () => {
+const SplitForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
@@ -57,7 +58,7 @@ const StripeForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <label className="shadow p-2">
         Card number
         <CardNumberElement
           options={options}
@@ -76,7 +77,7 @@ const StripeForm = () => {
         />
       </label>
       <br/>
-      <label>
+      <label className="shadow p-2">
         Expiration date
         <CardExpiryElement
           options={options}
@@ -95,7 +96,7 @@ const StripeForm = () => {
         />
       </label>
       <br/>
-      <label>
+      <label className="shadow p-2">
         CVC
         <CardCvcElement
           options={options}
@@ -114,11 +115,9 @@ const StripeForm = () => {
         />
       </label>
       <br/>
-      <button type="submit" disabled={!stripe}>
-        Pay
-      </button>
+      <Button type="submit" disabled={!stripe}>Pay and Book Now</Button>
     </form>
   );
 };
 
-export default StripeForm;
+export default SplitForm;

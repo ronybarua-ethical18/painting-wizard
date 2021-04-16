@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import ServiceBooking from '../ServiceBooking/ServiceBooking';
-import './Service';
-const Service = () => {
-    const serviceId = useParams();
+import './SingleService';
+const SingleService = () => {
+    const { serviceId } = useParams();
     const [services, setServices] = useState([]);
-    useEffect(() =>{
+    console.log(services)
+    useEffect(() => {
         fetch('http://localhost:5000/service/'+serviceId)
-        .then(res => res.json())
-        .then(data => setServices(data))
+            .then(res => res.json())
+            .then(data => setServices(data))
     }, [serviceId])
     return (
         <div>
-            {
-                services.map(service => <ServiceBooking service={service}></ServiceBooking>)
-            }
+            <ServiceBooking services={services}></ServiceBooking>
         </div>
     );
 };
 
-export default Service;
+export default SingleService;
