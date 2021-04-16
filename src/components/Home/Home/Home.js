@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ClientReviews from '../ClientReviews/ClientReviews';
+import Footer from '../Footer/Footer';
 import HeaderMain from '../Header/HeaderMain/HeaderMain';
 import MenuBar from '../Header/MenuBar/MenuBar';
+import PricingTable from '../PricingTable/PricingTable';
 import Services from '../Services/Services';
 const Home = () => {
     const [services, setServices] = useState([])
@@ -32,11 +34,18 @@ const Home = () => {
                 </div>
             </div>
             <div className="reviews container-fluid common-margin">
+            <h3 className="section-title text-center mb-5">Client Reviews</h3>
                 <div className="row">
                     {
                         reviews.map(review => <ClientReviews review={review}></ClientReviews>)
                     }
                 </div>
+            </div>
+            <div className="pricing-table common-margin">
+                <PricingTable></PricingTable>
+            </div>
+            <div className="footer">
+                <Footer></Footer>
             </div>
         </div>
     );

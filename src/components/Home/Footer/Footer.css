@@ -1,0 +1,23 @@
+.overlay-message{
+    background-color: #FF3997;
+    border-radius:100px 100px 100px 0px;
+    z-index:2;
+}
+#footer-overlay{
+    position:relative;
+}
+#btn-touch{
+    padding:12px 18px;
+    border-radius: 35px 35px 35px 0px;
+    color:#FF3997;
+    border:2px solid #FF3997;
+    background-color: #fff;
+}
+.main-footer{
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    z-index:-1;
+    padding-top:150px;
+}
