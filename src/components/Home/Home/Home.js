@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AboutUs from '../AboutUs/AboutUs';
 import ClientReviews from '../ClientReviews/ClientReviews';
 import Footer from '../Footer/Footer';
 import HeaderMain from '../Header/HeaderMain/HeaderMain';
@@ -25,8 +26,9 @@ const Home = () => {
         <div className="container-fluid">
             <MenuBar></MenuBar>
             <HeaderMain></HeaderMain>
+            <AboutUs></AboutUs>
             <div className="services container-fluid common-margin">
-            <h3 className="section-title text-center mb-5">Our Services</h3>
+            <h3 className="section-title text-center mb-5"><span className="brand-color">Our</span> <span className="title-color">Services</span></h3>
                 <div className="row">
                     {
                         services.map(service => <Services service={service}></Services>)
@@ -34,7 +36,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="reviews container-fluid common-margin">
-            <h3 className="section-title text-center mb-5">Client Reviews</h3>
+            <h3 className="section-title text-center mb-5"><span className="brand-color">Client</span> <span className="title-color">Reviews</span></h3>
                 <div className="row">
                     {
                         reviews.map(review => <ClientReviews review={review}></ClientReviews>)

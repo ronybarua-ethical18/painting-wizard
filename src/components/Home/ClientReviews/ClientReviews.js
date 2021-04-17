@@ -1,5 +1,4 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
 import './ClientReviews.css';
 const ClientReviews = (props) => {
     const { name, company, designation, review } = props.review;

@@ -11,7 +11,7 @@ const ServiceBooking = (props) => {
     const [address, setAddress] = useState("");
     const { register, handleSubmit } = useForm();
 
-    const handleAddress = data =>{
+    const handleAddress = data => {
         setAddress(data)
     }
     const handlePaymentSuccess = paymentId => {
@@ -36,7 +36,7 @@ const ServiceBooking = (props) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data){
+                if (data) {
                     alert('Your Payment Processed Successfully');
                 }
             })
@@ -44,10 +44,15 @@ const ServiceBooking = (props) => {
     return (
         <div className="container-fluid">
             <div className="row d-flex align-items-center">
-                <div className="col-md-3">
+                <div className="col-md-3 p-0">
                     <SideBar></SideBar>
                 </div>
                 <div className="col-md-9">
+                    <h3 className="service-title">
+                        <span className="brand-color">Booking </span>
+                        <span className="title-color">Details</span>
+                    </h3>
+                    <hr />
                     <div className="row">
                         <div className="col-md-6">
                             <div className="p-4 shadow">

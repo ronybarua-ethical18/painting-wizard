@@ -44,6 +44,22 @@ h4{
   border:2px solid #fff;
   transition: all 0.3s ease-in-out;
 }
+#btn-update{
+  color:#fff;
+  background: #00ABE9;
+  border:2px solid #fff;
+  border-radius: 35px 35px 35px 0px;
+  transition: all 0.3s ease-in-out;
+  padding:8px 16px;
+}
+#btn-delete{
+  color:#fff;
+  background: #E50646;
+  border:2px solid #fff;
+  border-radius: 35px 35px 35px 0px;
+  transition: all 0.3s ease-in-out;
+  padding:8px 16px;
+}
 #main-dashboard{
   height:100vh;
   width:100%;
@@ -60,4 +76,16 @@ ul, li{
 }
 li{
   margin-bottom: 20px;
+}
+.brand-color{
+  color:#F50B75;
+}
+.title-color{
+  color:#00ABE9;
+}
+td{
+  padding:10px 0 !important;
+}
+.table td, .table th {
+  vertical-align: middle !important;
 }

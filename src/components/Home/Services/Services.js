@@ -10,14 +10,16 @@ const Services = (props) => {
         history.push(url);
     }
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 mb-4">
             <Card className="w-100 shadow p-4">
-                <Card.Img variant="top" id="card-image" className="img-fluid" src={imageURL} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                <Card.Img variant="top" id="card-image" className="img-fluid mb-3" src={imageURL} />
+                <Card.Body className="p-0">
+                    <Card.Title className="">{name}</Card.Title>
                     <Card.Text>{description}</Card.Text>
-                    <Card.Text>{price}</Card.Text>
-                    <Button variant="primary" onClick={() => handleClick(_id)}>Book Now</Button>
+                   <div className="d-flex justify-content-between align-items-center">
+                        <h3 className="service-title brand-color">${price}</h3>
+                        <Button id="btn-update" onClick={() => handleClick(_id)}>Book Now</Button>
+                   </div>
                 </Card.Body>
             </Card>
         </div>

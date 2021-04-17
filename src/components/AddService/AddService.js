@@ -16,6 +16,7 @@ const AddService = () => {
             name: data.title,
             price: data.price,
             description: data.description,
+            serviceAdded: new Date().toDateString(),
             imageURL: imageURL
         }
         console.log(serviceData)
@@ -55,13 +56,17 @@ const AddService = () => {
     }
     return (
         <div>
-            <h3>Add Service</h3>
+            <h3 className="text-left ">
+                <span className="brand-color">Add </span>
+                <span className="title-color">Service</span>
+            </h3>
+            <hr/>
             <Form onSubmit={handleSubmit(onSubmit)} className="p-3 bg-white rounded-lg text-left">
                 <Form.Group controlId="formBasicName">
                     <Form.Label><b>Service Title</b></Form.Label>
                     <Form.Control type="text" id="input-service" name="title" {...register("title")} placeholder="Enter Service Name" required />
                 </Form.Group>
-                
+
                 <Form.Group controlId="formBasicAuthor">
                     <Form.Label><b>Service Description</b></Form.Label>
                     <textarea name="description" {...register("description")} id="input-description" placeholder="Enter Description" className="form-control" id="" cols="30" rows="5"></textarea>
@@ -76,7 +81,7 @@ const AddService = () => {
                     <label htmlFor="input-file" id="file-label"><FontAwesomeIcon icon={faUpload} className="mr-3"></FontAwesomeIcon>Upload Image</label>
                 </Form.Group>
                 <div className="d-flex justify-content-end">
-                    <Button type="submit" id="add-service" disabled={disableState}>Add Book</Button>
+                    <Button type="submit" id="add-service" disabled={disableState}>Add Service</Button>
                 </div>
             </Form>
         </div>

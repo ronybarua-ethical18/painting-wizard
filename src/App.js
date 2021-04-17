@@ -13,6 +13,9 @@ import { createContext } from 'react';
 import Login from './components/Login/Login';
 import { useState } from 'react';
 import SingleService from './components/SingleService/SingleService';
+import Bookings from './components/Bookings/Bookings';
+import ManageServices from './components/ManageServices/ManageServices';
+import Orders from './components/Orders/Orders';
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
@@ -33,8 +36,17 @@ function App() {
             <PrivateRoute path="/dashboard">
                 <DashBoard></DashBoard>
             </PrivateRoute>
+            <PrivateRoute path="/manageServices">
+                <ManageServices></ManageServices>
+            </PrivateRoute>
             <PrivateRoute path="/serviceBooking/:serviceId">
                 <SingleService></SingleService>
+            </PrivateRoute>
+            <PrivateRoute path="/bookings">
+                <Bookings></Bookings>
+            </PrivateRoute>
+            <PrivateRoute path="/orders">
+                <Orders></Orders>
             </PrivateRoute>
             <PrivateRoute path="/addReview">
               <AddReview></AddReview>

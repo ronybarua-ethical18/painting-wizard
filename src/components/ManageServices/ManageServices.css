@@ -1,0 +1,8 @@
+#table-head{
+    background-color:#F50B75;
+    color:#fff;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    
+   background-color: #fff !important;
+}

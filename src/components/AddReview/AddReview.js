@@ -27,10 +27,15 @@ const AddReview = () => {
     return (
         <div className="container-fluid" id="main-dashboard">
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3 p-0">
                     <SideBar></SideBar>
                 </div>
-                <div className="col-md-9" id="dashboard">
+                <div className="col-md-9">
+                    <h3 className="service-title mt-4">
+                        <span className="brand-color">Give Us </span>
+                        <span className="title-color">Review</span>
+                    </h3>
+                    <hr />
                     <Form onSubmit={handleSubmit(onSubmit)} className="p-3 bg-white rounded-lg text-left">
                         <Form.Group controlId="formBasicName">
                             <Form.Label><b>Your Name</b></Form.Label>
