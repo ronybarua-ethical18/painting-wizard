@@ -5,7 +5,7 @@ const ManageService = (props) => {
     const { _id, name, price, serviceAdded } = props.service;
 
     const deleteService = (id) => {
-        fetch(`http://localhost:5000/deleteService/${id}`, {
+        fetch(`https://mighty-ocean-87134.herokuapp.com/deleteService/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

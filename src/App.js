@@ -16,6 +16,7 @@ import SingleService from './components/SingleService/SingleService';
 import Bookings from './components/Bookings/Bookings';
 import ManageServices from './components/ManageServices/ManageServices';
 import Orders from './components/Orders/Orders';
+import AddAdmin from './components/AddAdmin/AddAdmin';
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <PrivateRoute path="/dashboard">
                 <DashBoard></DashBoard>
+            </PrivateRoute>
+            <PrivateRoute path="/admin">
+                <AddAdmin></AddAdmin>
             </PrivateRoute>
             <PrivateRoute path="/manageServices">
                 <ManageServices></ManageServices>

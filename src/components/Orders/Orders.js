@@ -5,7 +5,7 @@ import SideBar from '../DashBoard/SideBar/SideBar';
 const Orders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://mighty-ocean-87134.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -29,6 +29,7 @@ const Orders = () => {
                                     <th className="p-3">Email</th>
                                     <th className="p-3">Service</th>
                                     <th className="p-3">Status</th>
+                                    <th className="p-3">Action</th>
                                 </tr>
                             </thead>
                             <tbody>

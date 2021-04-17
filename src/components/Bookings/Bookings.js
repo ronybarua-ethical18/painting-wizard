@@ -1,29 +1,42 @@
 import React, { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { Spinner } from 'react-bootstrap';
+import { UserContext } from '../../App';
 import SideBar from '../DashBoard/SideBar/SideBar';
 import BookingList from './BookingList';
 
 const Bookings = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [bookings, setBookings] = useState([]);
-    useEffect(() =>{
-        fetch('http://localhost:5000/bookings')
-        .then(res => res.json())
-        .then(data => setBookings(data))
+    useEffect(() => {
+        fetch('https://mighty-ocean-87134.herokuapp.com/bookings?email=' + loggedInUser.email, {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json', }
+        })
+            .then(res => res.json())
+            .then(data => setBookings(data))
     }, [])
     return (
-        <div className="container-fluid"> 
+        <div className="container-fluid">
             <div className="row">
                 <div className="col-md-3 p-0">
                     <SideBar></SideBar>
                 </div>
                 <div className="col-md-9 ">
                     <h3 className="service-title mt-4">
-                    <span className="brand-color">Booking </span> 
-                    <span className="title-color">List</span>
+                        <span className="brand-color">Booking </span>
+                        <span className="title-color">List</span>
                     </h3>
-                    <hr/>
+                    <hr />
                     <div className="row">
+                            {/* {
+                                bookings.length === 0 && <Spinner animation="grow" />
+                            } */}
                         {
-                            bookings.map(booking => <BookingList booking={booking}></BookingList>)
+                            bookings.length ? bookings.map(booking => <BookingList booking={booking}></BookingList>)
+                                : <div className="p-5 text-center text-secondary">
+                                    <h3 className="text-secondary">Oops! You did'nt book any services yet!</h3>
+                                </div>
                         }
                     </div>
                 </div>
