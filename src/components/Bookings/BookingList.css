@@ -1,0 +1,12 @@
+.status-Done{
+    background-color:green;
+    color:white;
+}
+.status-Ongoing{
+    background-color:goldenrod;
+    color:#fff;
+}
+.status-Pending{
+    background-color:red;
+    color:#fff;
+}

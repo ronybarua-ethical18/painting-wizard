@@ -11,9 +11,9 @@ const Footer = () => {
 Steps For Your Home?</h2>
                 <Button id="btn-touch">Get In Touch</Button>
             </div>
-            <div className="main-footer bg-light">
+            <div className="main-footer">
                 <div className="row no-gutters">
-                    <div className="col-md-4 text-dark p-4">
+                    <div className="col-md-4 p-4">
                         <h5 className="mb-4">Company Information</h5>
                         <address>
                             South Khulshi,Road#3,b-block,JamalKhan.

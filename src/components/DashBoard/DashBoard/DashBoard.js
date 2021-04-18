@@ -1,5 +1,5 @@
 import React from 'react';
-import AddService from '../../AddService/AddService';
+import AddReview from '../../AddReview/AddReview';
 import SideBar from '../SideBar/SideBar';
 import './DashBoard.css';
 const DashBoard = () => {
@@ -7,11 +7,11 @@ const DashBoard = () => {
     return (
         <div className="container-fluid" id="main-dashboard">
             <div className="row">
-                <div className="col-md-3 p-0">
+                <div className="col-lg-3 col-md-12 p-0 h-100">
                     <SideBar></SideBar>
                 </div>
-                <div className="col-md-9 p-4 text-center" id="dashboard">
-                    <AddService></AddService>
+                <div className="col-lg-9 p-4 col-md-12 h-100" id="dashboard">
+                    <AddReview></AddReview>
                 </div>
             </div>
         </div>

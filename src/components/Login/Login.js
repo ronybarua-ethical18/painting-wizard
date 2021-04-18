@@ -8,6 +8,8 @@ import { Button, Form } from 'react-bootstrap';
 import banner from '../../images/banners.jpg';
 import { useHistory, useLocation } from 'react-router';
 import './Login.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     // firebase initialization
@@ -42,6 +44,7 @@ const Login = () => {
             .then((result) => {
                 /** @type {firebase.auth.OAuthCredential} */
                 var user = result.user;
+                console.log(user);
                 handleResponse(user, true);
                 isValidLoggedIn();
                 setLoggedInUser(user)
@@ -56,26 +59,28 @@ const Login = () => {
         <div className="container-fluid" id="loginPage">
             <MenuBar></MenuBar>
             <div className="row">
-                <div className="col-md-6 d-flex align-items-center p-4 justify-content-center">
-                    <Form className="w-100">
+                <div id="headerMain" className="col-md-6 d-flex align-items-center p-4 justify-content-center">
+                    <Form className="w-100 shadow p-4">
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label><span className="brand-color">Email address</span></Form.Label>
                             <Form.Control type="email" placeholder="Enter email" />
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
                             </Form.Text>
                         </Form.Group>
                         <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label><span className="title-color">Password</span></Form.Label>
                             <Form.Control type="password" placeholder="Password" />
                         </Form.Group>
                         <Form.Group controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Check me out" />
                         </Form.Group>
-                        <Button variant="primary" type="submit">
+                        <Button id="btn-update" type="submit">
                             Login
                         </Button>
-                        <Button onClick={handleGoogleSignIn}>Login with Google</Button>
+                        <Button id="btn-delete" onClick={handleGoogleSignIn}>
+                            <FontAwesomeIcon icon={faGoogle} className="mr-2"></FontAwesomeIcon>Login with Google
+                        </Button>
                     </Form>
                 </div>
                 <div className="col-md-6">

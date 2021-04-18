@@ -9,7 +9,7 @@ const HeaderMain = () => {
     return (
         <div className="container-fluid">
             <div className="row no-gutters" id="headerMain">
-                <div className="col-md-6 p-0 d-flex text-left align-items-center" id="content">
+                <div className="col-md-6 col-sm-12 col-xs-12 p-0 d-flex text-left align-items-center" id="content">
                     <div className="main-content p-4">
                         <h1 className="text-white">Welcome to Painting Wizard</h1>
                         <div className="service p-3 bg-white rounded-lg my-4">
@@ -20,7 +20,7 @@ const HeaderMain = () => {
                         <Button id="btn-brand">Get Started</Button>
                     </div>
                 </div>
-                <div className="col-md-6 p-0">
+                <div className="col-md-6 p-0 col-sm-12 col-xs-12">
                     <img id="banner" src={banner} className="img-fluid" alt="" />
                 </div>
             </div>

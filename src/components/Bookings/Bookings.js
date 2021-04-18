@@ -19,10 +19,10 @@ const Bookings = () => {
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col-md-3 p-0">
+                <div className="col-lg-3 col-md-12 col-sm-12 p-0">
                     <SideBar></SideBar>
                 </div>
-                <div className="col-md-9 ">
+                <div className="col-lg-9 co-md-12 col-sm-12">
                     <h3 className="service-title mt-4">
                         <span className="brand-color">Booking </span>
                         <span className="title-color">List</span>

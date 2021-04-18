@@ -6,7 +6,7 @@ import './SinglePricing.css';
 const SinglePricing = (props) => {
     const {title, price, bg} = props.pricing;
     return (
-        <div className="col-md-4">
+        <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
             <div className="pricing-table bg-light p-4 shadow rounded" id={`bg-${bg}`}>
                 <h5 className="mb-4"><b>{title}</b></h5>
                 <ul className="p-0 " id={`bg-${bg}`}>

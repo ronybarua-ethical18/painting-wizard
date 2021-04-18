@@ -89,3 +89,10 @@ td{
 .table td, .table th {
   vertical-align: middle !important;
 }
+.carousel-indicators li{
+  background-color: #F50B75 !important;
+  align-items: center !important;
+}
+.carousel-indicators{
+  bottom:-30px !important;
+}

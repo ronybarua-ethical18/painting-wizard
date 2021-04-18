@@ -14,3 +14,8 @@
     text-decoration: none;
     color:#FF3997;
 }
+@media only screen and (max-width: 500px) {
+    #logo-title{
+        font-size: 20px;
+    }
+  }
