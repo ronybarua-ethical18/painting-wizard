@@ -22,12 +22,12 @@ const AboutUs = () => {
                     </animated.div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ea amet odit tempora esse similique, explicabo maxime minima numquam fuga adipisci excepturi quasi, nulla laboriosam, possimus voluptatibus. Dolores, aut libero.</p>
                     <ul className="p-0">
-                        <li><FontAwesomeIcon className="mr-3" icon={faCheck}></FontAwesomeIcon>Object Painting</li>
-                        <li><FontAwesomeIcon className="mr-3" icon={faCheck}></FontAwesomeIcon>Wall Painting</li>
-                        <li><FontAwesomeIcon className="mr-3" icon={faCheck}></FontAwesomeIcon>Furniture Painting</li>
-                        <li><FontAwesomeIcon className="mr-3" icon={faCheck}></FontAwesomeIcon>Object Painting</li>
-                        <li><FontAwesomeIcon className="mr-3" icon={faCheck}></FontAwesomeIcon>Exterior Painting</li>
-                        <li><FontAwesomeIcon className="mr-3" icon={faCheck}></FontAwesomeIcon>Other Painting</li>
+                        <li><FontAwesomeIcon className="mr-3 iconic" icon={faCheck}></FontAwesomeIcon>Object Painting</li>
+                        <li><FontAwesomeIcon className="mr-3 iconic" icon={faCheck}></FontAwesomeIcon>Wall Painting</li>
+                        <li><FontAwesomeIcon className="mr-3 iconic" icon={faCheck}></FontAwesomeIcon>Furniture Painting</li>
+                        <li><FontAwesomeIcon className="mr-3 iconic" icon={faCheck}></FontAwesomeIcon>Object Painting</li>
+                        <li><FontAwesomeIcon className="mr-3 iconic" icon={faCheck}></FontAwesomeIcon>Exterior Painting</li>
+                        <li><FontAwesomeIcon className="mr-3 iconic" icon={faCheck}></FontAwesomeIcon>Other Painting</li>
                     </ul>
                     <Button id="btn-delete">Learn More</Button>
                 </div>

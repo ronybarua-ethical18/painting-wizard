@@ -44,14 +44,14 @@ const AddReview = () => {
                     </Form.Group>
                     <Form.Group controlId="formBasicName">
                         <Form.Label><b>Designation</b></Form.Label>
-                        <Form.Control type="text" id="input-service" name="designation" {...register("designation")} placeholder="Company Name" required />
+                        <Form.Control type="text" id="input-service" name="designation" {...register("designation")} placeholder="Designation" required />
                     </Form.Group>
                     <Form.Group controlId="formBasicAuthor">
                         <Form.Label><b>Review</b></Form.Label>
                         <textarea name="review" {...register("review")} id="input-description" placeholder="Your Review" className="form-control" id="" cols="30" rows="5"></textarea>
                     </Form.Group>
                     <div className="d-flex justify-content-end">
-                        <Button type="submit" id="add-service">Submit</Button>
+                        <Button type="submit" id="btn-delete">Submit</Button>
                     </div>
                 </Form>
             </div>

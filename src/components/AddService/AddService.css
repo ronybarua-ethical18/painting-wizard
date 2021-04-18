@@ -26,11 +26,11 @@
     border-radius: 25px;
     color: #000;
     cursor: pointer;
-    border: 2px solid #f10fad;
+    border: 2px solid #FF3997;
 }
 
 #file-label:hover {
     color: #fff;
-    background-color: rgba(255, 2, 2);
+    background-color: #FF3997;
     transition: all 0.3s ease-in-out;
 }

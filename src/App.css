@@ -68,6 +68,9 @@ h4{
 .common-margin{
   margin:100px 0;
 }
+.link-style:hover{
+  text-decoration: none;
+}
 #card-image{
   height:200px;
 }

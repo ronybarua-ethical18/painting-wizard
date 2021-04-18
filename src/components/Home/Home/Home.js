@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import AboutUs from '../AboutUs/AboutUs';
-import ClientReviews from '../ClientReviews/ClientReviews';
 import ContactUs from '../ContactUs/ContactUs';
 import Footer from '../Footer/Footer';
 import HeaderMain from '../Header/HeaderMain/HeaderMain';
 import MenuBar from '../Header/MenuBar/MenuBar';
 import PricingTable from '../PricingTable/PricingTable';
 import Services from '../Services/Services';
+import './Home.css';
 const Home = () => {
     const [services, setServices] = useState([])
     const [reviews, setReviews] = useState([]);
@@ -46,10 +46,17 @@ const Home = () => {
                                 reviews.map(review => {
                                     return <Carousel.Item interval={2000}>
                                         <div className="col-md-6  offset-md-3 shadow w-100">
-                                            <div className="client-reviews shadow p-4">
-                                                <h5 className=""><b>{review.name}</b></h5>
+                                            <div className="client-reviews shadow p-4 " id="client-reviews">
+                                                <div className="d-flex justify-content-between align-items-center mb-4">
+                                                    <div>
+                                                        <h5 className="title-color"><b>{review.name}</b></h5>
+                                                        <b className="">{review.designation}</b>
+                                                    </div>
+                                                    <div>
+                                                        <img src={review.photo} id="client-image" className="img-fluid w-75" alt="" />
+                                                    </div>
+                                                </div>
                                                 <p>{review.company}</p>
-                                                <b>{review.designation}</b>
                                                 <blockquote>{review.review}</blockquote>
                                             </div>
                                         </div>

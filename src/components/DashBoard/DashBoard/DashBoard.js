@@ -13,7 +13,6 @@ const DashBoard = () => {
                 <div className="col-lg-9 p-4 col-md-12 h-100" id="dashboard">
                     <AddReview></AddReview>
                 </div>
-                lorem30
             </div>
         </div>
     );

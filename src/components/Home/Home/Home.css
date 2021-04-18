@@ -1,0 +1,8 @@
+#client-image{
+    border-radius: 50%;
+    border: 3px solid gray;
+}
+#client-reviews{
+    border-top: 2px solid #E50646;
+    border-bottom: 2px solid #00ABE9;
+}
