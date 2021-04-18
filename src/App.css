@@ -1,6 +1,7 @@
 .App {
 
   font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
 }
 h3, h4, h1, h2{
   font-family:'backslash';

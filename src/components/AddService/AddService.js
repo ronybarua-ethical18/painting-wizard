@@ -87,7 +87,7 @@ const AddService = () => {
                             <label htmlFor="input-file" id="file-label"><FontAwesomeIcon icon={faUpload} className="mr-3"></FontAwesomeIcon>Upload Image</label>
                         </Form.Group>
                         <div className="d-flex justify-content-end">
-                            <Button type="submit" id="add-service" disabled={disableState}>Add Service</Button>
+                            <Button type="submit" id="btn-delete" disabled={disableState}>Add Service</Button>
                         </div>
                     </Form>
                 </div>

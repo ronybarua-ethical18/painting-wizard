@@ -1,12 +1,16 @@
-.status-Done{
-    background-color:green;
+.status-Done, .status-Ongoing, .status-Pending{
     color:white;
+    font-weight: 700;
+    padding:8px 16px;
+    border-radius: 35px 35px 35px 0px;
 }
+
 .status-Ongoing{
     background-color:goldenrod;
-    color:#fff;
 }
 .status-Pending{
     background-color:red;
-    color:#fff;
+}
+.status-Done{
+    background-color:green;
 }

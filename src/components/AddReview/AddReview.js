@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import { UserContext } from '../../App';
 import './AddReview.css';
 const AddReview = () => {
     const { handleSubmit, register } = useForm();
-
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const onSubmit = data => {
         const reviewData = {
             name: data.name,
             company: data.company,
             designation: data.designation,
+            photo: loggedInUser.photoURL,
             review: data.review
         }
         const url = 'https://mighty-ocean-87134.herokuapp.com/addReview';

@@ -7,7 +7,7 @@ import { UserContext } from '../../../../App';
 const MenuBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
-        <Navbar collapseOnSelect  expand="lg" className="bg-white shadow py-3" fixed="top">
+        <Navbar collapseOnSelect  expand="lg" className="bg-white shadow py-2" fixed="top">
             <Navbar.Brand to="/home"><img id="logo" className="mr-2" src={cover} alt="" /><span id="logo-title">Painting<span className="title-color">Wizard</span></span> </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

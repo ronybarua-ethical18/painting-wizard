@@ -10,7 +10,7 @@ const OrderList = (props) => {
         status = selectedOption;
         const updateData = { id, status };
         console.log(updateData)
-        fetch(`http://localhost:5000/updateBooking/${id}`, {
+        fetch(`https://mighty-ocean-87134.herokuapp.com/updateBooking/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updateData)

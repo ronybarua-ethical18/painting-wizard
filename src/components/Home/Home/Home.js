@@ -37,7 +37,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div className="reviews container-fluid common-margin">
+            <div className="reviews common-margin">
                 <h3 className="section-title text-center mb-5"><span className="brand-color">Client</span> <span className="title-color">Reviews</span></h3>
                 <div className="row">
                     <div className="col-md-12 d-flex justify-content-center">

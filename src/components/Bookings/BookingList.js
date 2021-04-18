@@ -8,7 +8,7 @@ const BookingList = (props) => {
             <Card className="w-100 shadow p-4 ">
                 <Card.Img variant="top" id="card-image" className="img-fluid" src={serviceImage} />
                 <Card.Body className="p-0">
-                    <div className="d-flex justify-content-between py-3">
+                    <div className="d-flex align-items-center justify-content-between py-3">
                         <span>{bookingTime}</span>
                         <span className="text-danger"><label className={`status-${status}`}>{status}</label></span>
                     </div>
