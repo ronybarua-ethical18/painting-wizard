@@ -3,7 +3,7 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 import './ContactUs.css';
 const ContactUs = () => {
     return (
-        <div className="container-fluid common-margin">
+        <div className="container-fluid common-margin" id="contact">
             <div className="row">
                 <div className="col-md-6 offset-md-3 p-4 shadow">
                     <h3 className="service-title text-center mb-5">

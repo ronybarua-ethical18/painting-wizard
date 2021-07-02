@@ -9,6 +9,7 @@
 .navigation{
     text-decoration: none;
     color:#000;
+    cursor:pointer;
 }
 .navigation:hover{
     text-decoration: none;

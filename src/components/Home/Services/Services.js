@@ -10,7 +10,7 @@ const Services = (props) => {
         history.push(url);
     }
     return (
-        <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4 h-100">
+        <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4 h-100" id="service">
             <Card className="w-100 shadow p-4 h-100" id="service-card">
                 <div className="service-image">
                     <Card.Img variant="top" id="card-image" className="img-fluid mb-3" src={imageURL} />

@@ -1,5 +1,5 @@
 import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
-import { faBookOpen, faBookReader, faEye, faHome, faThList, faUserShield, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen, faBookReader, faEye, faHome, faSignOutAlt, faThList, faUserShield, faWrench } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -22,11 +22,22 @@ const SideBar = () => {
             .then(data => setIsAdmin(data))
     }, [])
 
-    
+
     return (
         <div className="p-4" id="sidebar">
-            <div className="navigationLink mb-3 d-flex align-items-center">
-                <img id="server-logo" className="mr-2" src={logo} alt="" /><span id="sidebar-logo-title"><span className="brand-color">Painting</span><span className="title-color">Wizard</span></span>
+            <div className="navigationLink mb-3 d-flex align-items-center justify-content-between">
+                <img id="server-logo" className="mr-2" src={logo} alt="" />
+                <Link to="/home"><span id="sidebar-logo-title"><span className="brand-color">Painting</span><span className="title-color">Wizard</span></span></Link>
+                {
+                    (loggedInUser.email || sessionStorage.length !== 0) && <FontAwesomeIcon 
+                    icon={faSignOutAlt} 
+                    className="brand-color"
+                    onClick={() => {
+                        setLoggedInUser({})
+                        sessionStorage.clear()
+                    }}></FontAwesomeIcon>
+
+                }
             </div>
             <div id="navigationLink" className="bg-white mt-3 mb-3 p-3">
                 <Link to="/home" className="link-style">

@@ -83,6 +83,7 @@ li{
 }
 .brand-color{
   color:#F50B75;
+  cursor: pointer;
 }
 .title-color{
   color:#00ABE9;

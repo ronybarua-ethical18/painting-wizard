@@ -25,7 +25,7 @@ const Home = () => {
             .then(data => setReviews(data))
     }, [])
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" id="home">
             <MenuBar></MenuBar>
             <HeaderMain></HeaderMain>
             <AboutUs></AboutUs>
@@ -37,16 +37,16 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <div className="reviews common-margin">
+            <div className="reviews common-margin" id="testimonial">
                 <h3 className="section-title text-center mb-5"><span className="brand-color">Client</span> <span className="title-color">Reviews</span></h3>
                 <div className="row">
                     <div className="col-md-12 d-flex justify-content-center">
-                        <Carousel>
+                        <Carousel className="w-100">
                             {
                                 reviews.map(review => {
                                     return <Carousel.Item interval={2000}>
-                                        <div className="col-md-6  offset-md-3 shadow w-100">
-                                            <div className="client-reviews shadow p-4 " id="client-reviews">
+                                        <div className="col-md-6 offset-md-3 shadow w-100">
+                                            <div className="client-reviews shadow p-4 w-100" id="client-reviews">
                                                 <div className="d-flex justify-content-between align-items-center mb-4">
                                                     <div>
                                                         <h5 className="title-color"><b>{review.name}</b></h5>

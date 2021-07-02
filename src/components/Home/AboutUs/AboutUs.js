@@ -14,7 +14,7 @@ const AboutUs = () => {
             </h3>
             <div className="row">
                 <div className="col-md-6 mb-4">
-                    <img src={aboutUs} className="img-fluid" alt="" />
+                    <img src={aboutUs} className="img-fluid rounded-lg shadow" alt="" />
                 </div>
                 <div className="col-md-6" id="about-bg">
                     <animated.div scrollTop={props.scroll}>
